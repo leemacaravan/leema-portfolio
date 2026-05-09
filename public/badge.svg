@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect x="10" y="10" width="180" height="180" rx="8" fill="#f5f2ea" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="100" y="90" text-anchor="middle" font-family="Caveat, cursive" font-size="32" font-weight="700" fill="#2a2a2a">Leema</text>
+  <text x="100" y="125" text-anchor="middle" font-family="Caveat, cursive" font-size="20" fill="#d4502c">Caravan</text>
+  <line x1="40" y1="140" x2="160" y2="140" stroke="#2a2a2a" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="100" y="162" text-anchor="middle" font-family="Patrick Hand, cursive" font-size="13" fill="#555">Creative Developer</text>
+</svg>
