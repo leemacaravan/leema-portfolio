@@ -22,6 +22,23 @@ export default function JourneyPage() {
   const { unlock } = useAchievements();
   const scrollRef = useRef(0);
 
+  // Explorer: unlock after 2s on page or on first scroll, whichever comes first
+  useEffect(() => {
+    let fired = false;
+    function fire() {
+      if (fired) return;
+      fired = true;
+      unlock("explorer");
+      window.removeEventListener("scroll", fire);
+    }
+    const timer = setTimeout(fire, 2000);
+    window.addEventListener("scroll", fire, { once: true, passive: true });
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", fire);
+    };
+  }, [unlock]);
+
   useEffect(() => {
     function onScroll() {
       const max = document.body.scrollHeight - window.innerHeight;

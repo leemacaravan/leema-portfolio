@@ -28,9 +28,11 @@ export const ACHIEVEMENTS: Achievement[] = [
 
 interface AchievementsState {
   unlocked: AchievementId[];
+  pendingToast: AchievementId | null;
   soundEnabled: boolean;
   panelOpen: boolean;
   unlock: (id: AchievementId) => boolean;
+  clearToast: () => void;
   togglePanel: () => void;
   toggleSound: () => void;
 }
@@ -39,12 +41,16 @@ export const useAchievements = create<AchievementsState>()(
   persist(
     (set, get) => ({
       unlocked: [],
+      pendingToast: null,
       soundEnabled: false,
       panelOpen: false,
       unlock(id) {
         if (get().unlocked.includes(id)) return false;
-        set((s) => ({ unlocked: [...s.unlocked, id] }));
+        set((s) => ({ unlocked: [...s.unlocked, id], pendingToast: id }));
         return true;
+      },
+      clearToast() {
+        set({ pendingToast: null });
       },
       togglePanel() {
         set((s) => ({ panelOpen: !s.panelOpen }));
@@ -53,6 +59,13 @@ export const useAchievements = create<AchievementsState>()(
         set((s) => ({ soundEnabled: !s.soundEnabled }));
       },
     }),
-    { name: "leema-achievements" }
+    {
+      name: "leema-achievements",
+      partialize: (state) => ({
+        unlocked: state.unlocked,
+        soundEnabled: state.soundEnabled,
+        panelOpen: state.panelOpen,
+      }),
+    }
   )
 );

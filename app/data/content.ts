@@ -53,10 +53,9 @@ export const PROJECTS = [
     id: "rpi-eventhub",
     title: "RPI EventHub",
     stack: "MERN · OPEN SOURCE · RCOS",
-    desc: "Open-source events platform for RPI built on the full MERN stack. Presented at Rensselaer Summer Open-Source Poster Session.",
+    desc: "Open-source events platform for RPI built on the full MERN stack via RCOS. Presented at Rensselaer Summer Open-Source Poster Session. Not currently hosted.",
     links: [
-      { label: "Live ↗", href: "https://rpieventhub.com" },
-      { label: "GitHub ↗", href: "https://github.com/leemacaravan" },
+      { label: "GitHub ↗", href: "https://github.com/MeiH10/RPI-EventHub" },
     ],
     note: "",
   },
@@ -134,8 +133,8 @@ export const PROUD_OF = [
     label: "— OPEN SOURCE —",
     name: "RCOS",
     symbol: "⌘",
-    desc: "RPI EventHub contributor\nrpieventhub.com",
-    href: "https://rpieventhub.com",
+    desc: "RPI EventHub contributor\nopen-source via RCOS",
+    href: "https://github.com/MeiH10/RPI-EventHub",
   },
   {
     label: "— RESEARCH —",

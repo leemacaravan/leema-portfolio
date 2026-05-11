@@ -15,11 +15,9 @@ export default function PaperAirplane() {
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Detect touch device
     isTouch.current = window.matchMedia("(hover: none)").matches;
 
     if (isTouch.current) {
-      // Touch: follow scroll vertically
       function onScroll() {
         if (!ref.current) return;
         const max = document.body.scrollHeight - window.innerHeight;
@@ -36,19 +34,20 @@ export default function PaperAirplane() {
       return () => window.removeEventListener("scroll", onScroll);
     }
 
-    // Desktop: follow mouse with lerp
+    // Desktop: hide system cursor and let the airplane be the cursor
+    document.body.style.cursor = "none";
+
     function onMouseMove(e: MouseEvent) {
       target.current = { x: e.clientX, y: e.clientY };
     }
     window.addEventListener("mousemove", onMouseMove);
 
-    // Start position at center
     pos.current = { x: window.innerWidth / 2, y: window.innerHeight * 0.7 };
     target.current = { ...pos.current };
     prev.current = { ...pos.current };
 
     function tick() {
-      const lerp = prefersReduced ? 1 : 0.08;
+      const lerp = prefersReduced ? 1 : 0.25;
       prev.current = { ...pos.current };
       pos.current.x += (target.current.x - pos.current.x) * lerp;
       pos.current.y += (target.current.y - pos.current.y) * lerp;
@@ -66,6 +65,7 @@ export default function PaperAirplane() {
     frameRef.current = requestAnimationFrame(tick);
 
     return () => {
+      document.body.style.cursor = "";
       window.removeEventListener("mousemove", onMouseMove);
       cancelAnimationFrame(frameRef.current);
     };

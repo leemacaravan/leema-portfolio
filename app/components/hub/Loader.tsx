@@ -13,26 +13,31 @@ export default function Loader({ onDone }: LoaderProps) {
   const [pct, setPct] = useState(0);
   const [phase, setPhase] = useState<"loading" | "logo" | "done">("loading");
   const ringRef = useRef<SVGCircleElement>(null);
+  const onDoneRef = useRef(onDone);
+  useEffect(() => { onDoneRef.current = onDone; });
 
   useEffect(() => {
     let current = 0;
+    let active = true;
     const interval = setInterval(() => {
       current += Math.random() * 7 + 2;
       if (current >= 100) {
         current = 100;
         clearInterval(interval);
+        if (!active) return;
         setPct(100);
-        setTimeout(() => setPhase("logo"), 400);
+        setTimeout(() => { if (active) setPhase("logo"); }, 400);
         setTimeout(() => {
+          if (!active) return;
           setPhase("done");
-          setTimeout(onDone, 600);
+          setTimeout(() => { if (active) onDoneRef.current(); }, 600);
         }, 1200);
         return;
       }
-      setPct(Math.floor(current));
+      if (active) setPct(Math.floor(current));
     }, 90);
-    return () => clearInterval(interval);
-  }, [onDone]);
+    return () => { active = false; clearInterval(interval); };
+  }, []);
 
   useEffect(() => {
     if (ringRef.current) {

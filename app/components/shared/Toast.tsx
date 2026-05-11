@@ -1,28 +1,26 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useAchievements, ACHIEVEMENTS, type AchievementId } from "@/app/store/achievements";
+import { useAchievements, ACHIEVEMENTS } from "@/app/store/achievements";
 
 export default function Toast() {
-  const { unlocked } = useAchievements();
-  const prevUnlocked = useRef<AchievementId[]>([]);
+  const { pendingToast, clearToast } = useAchievements();
   const [visible, setVisible] = useState(false);
   const [current, setCurrent] = useState<{ title: string; desc: string } | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const newOnes = unlocked.filter((id) => !prevUnlocked.current.includes(id));
-    prevUnlocked.current = unlocked;
-    if (newOnes.length === 0) return;
+    if (!pendingToast) return;
 
-    const ach = ACHIEVEMENTS.find((a) => a.id === newOnes[0]);
+    const ach = ACHIEVEMENTS.find((a) => a.id === pendingToast);
     if (!ach) return;
 
+    clearToast();
     setCurrent({ title: ach.title, desc: ach.desc });
     setVisible(true);
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => setVisible(false), 3000);
-  }, [unlocked]);
+  }, [pendingToast, clearToast]);
 
   if (!current) return null;
 

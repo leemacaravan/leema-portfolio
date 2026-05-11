@@ -12,7 +12,7 @@ These corrections override anything in index.html or earlier drafts. Apply them 
 
 4. **Real URLs (use these, do not invent others):**
    - Missing Patients live: https://missing-patients.vercel.app/
-   - RPI EventHub live: https://rpieventhub.com
+   - RPI EventHub live: **DEAD — do not link to rpieventhub.com**. GitHub only: https://github.com/MeiH10/RPI-EventHub
    - GitHub: https://github.com/leemacaravan
    - LinkedIn: https://www.linkedin.com/in/leema-caravan-4738791aa/
    - Email: leemacaravan@gmail.com
@@ -25,3 +25,5 @@ These corrections override anything in index.html or earlier drafts. Apply them 
 6. **Graduation:** May 2026 at RPI, B.S. Computer Science, minor in Economics.
 
 7. **Do not invent accomplishments.** Use only content from index.html and this file.
+
+8. **Paper airplane on /journey is the cursor.** `cursor: none` is set on `document.body` for devices that support hover (`(hover: hover)`). Restored to `""` on unmount. Touch devices are unaffected.

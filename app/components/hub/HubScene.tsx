@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { useAchievements } from "@/app/store/achievements";
 
 const CLOUDS = [
   { x: "5%",  top: "12%", w: 140, speed: 0.3, opacity: 0.8 },
@@ -111,7 +110,6 @@ function WelcomeMat() {
 
 export default function HubScene({ visible }: { visible: boolean }) {
   const router = useRouter();
-  const { unlock } = useAchievements();
   const cloudsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -133,7 +131,6 @@ export default function HubScene({ visible }: { visible: boolean }) {
   }, [visible]);
 
   function handleEnter() {
-    unlock("explorer");
     router.push("/journey");
   }
 
