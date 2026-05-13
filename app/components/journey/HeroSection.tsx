@@ -21,7 +21,7 @@ export default function HeroSection() {
         className="mt-2 tracking-[2px] text-[var(--ink-soft)]"
         style={{ fontFamily: "var(--font-patrick-hand)", fontSize: 18 }}
       >
-        (Computer Science · Class of &apos;26)
+        Computer Science · RPI · Class of 2026
       </div>
 
       {/* Character on cloud */}
@@ -45,13 +45,6 @@ export default function HeroSection() {
         <path d="M170 94 L120 96 L100 100 L75 105" strokeLinecap="round" strokeWidth="2" />
         <path d="M120 96 L115 110 M100 100 L93 113" strokeLinecap="round" />
       </svg>
-
-      <p
-        className="mt-4 max-w-[400px]"
-        style={{ fontFamily: "var(--font-shadows)", fontSize: 18, color: "var(--ink-soft)" }}
-      >
-        &ldquo;Daughter of Afghan refugees.<br />Doing what my mother couldn&apos;t.&rdquo;
-      </p>
 
       <div className="mt-6 flex gap-3.5 flex-wrap justify-center">
         <a

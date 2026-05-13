@@ -81,33 +81,26 @@ export const JOURNEY_STOPS = [
     id: "daisy",
     name: "DAISY",
     years: "SUMMER '25",
-    role: "Product Ops Intern\n(Building Portal)",
+    role: "Product Ops Intern (Building Portal)",
     href: "https://www.daisyco.com",
   },
   {
     id: "coder",
     name: "CODER",
     years: "'25",
-    role: "Code Coach\n(Python · C++ · Lua)",
+    role: "Code Coach (Python · C++ · Lua)",
     href: "https://www.coder.com",
   },
   {
     id: "rpi-lab",
     name: "RPI LAB",
     years: "'24",
-    role: "Research Asst.\n(ML / Data Viz)",
+    role: "Research Asst. (ML / Data Viz)",
     href: "https://science.rpi.edu/computer-science",
   },
 ];
 
 export const PROUD_OF = [
-  {
-    label: "— ROOTS —",
-    name: "First-Gen",
-    symbol: "★",
-    desc: "Daughter of Afghan refugees\ndoing what mom couldn't",
-    href: "",
-  },
   {
     label: "— REVENUE IMPACT —",
     name: "+125%",

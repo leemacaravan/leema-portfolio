@@ -17,28 +17,14 @@ export default function AboutSection() {
         ABOUT
       </h2>
       <div
-        className="max-w-[640px] mt-6 text-left"
+        className="max-w-[560px] mt-6 text-left"
         style={{ fontFamily: "var(--font-patrick-hand)", fontSize: 19, lineHeight: 1.7, color: "var(--ink)" }}
       >
-        <p style={{ marginBottom: 16 }}>
-          I&apos;m a senior at <strong>Rensselaer Polytechnic Institute</strong> studying Computer
-          Science with a minor in Economics, graduating <strong>May 2026</strong>.
-        </p>
-        <p style={{ marginBottom: 16 }}>
-          I build things that solve real problems — internal tools that drive revenue, AI agents
-          that help people, EHR integrations that keep patients on schedule. Most recently I owned
-          an end-to-end portal at <strong>Daisy</strong> that&apos;s now used daily across the company.
-        </p>
-        <p
-          style={{
-            fontFamily: "var(--font-shadows)",
-            color: "var(--ink-soft)",
-            marginTop: 24,
-            fontSize: 17,
-          }}
-        >
-          ✦ Second-youngest of five. Daughter of Afghan refugees. The first generation in my
-          family to go to college — and most of what I want to build comes from that.
+        <p>
+          Senior at <strong>Rensselaer Polytechnic Institute</strong> studying CS with a minor in
+          Economics, graduating <strong>May 2026</strong>. I build things that solve real
+          problems — internal tools, AI agents, and EHR integrations. Most recently I owned an
+          end-to-end portal at <strong>Daisy</strong> that&apos;s now used daily across the company.
         </p>
       </div>
     </section>

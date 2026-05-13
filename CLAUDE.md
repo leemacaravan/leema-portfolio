@@ -26,4 +26,10 @@ These corrections override anything in index.html or earlier drafts. Apply them 
 
 7. **Do not invent accomplishments.** Use only content from index.html and this file.
 
-8. **Paper airplane on /journey is the cursor.** `cursor: none` is set on `document.body` for devices that support hover (`(hover: hover)`). Restored to `""` on unmount. Touch devices are unaffected.
+8. **Site title is "Leema Caravan — Portfolio".** NEVER use "Creative Developer" or any other professional descriptor in the title.
+
+9. **No family backstory anywhere.** Do not include: "Daughter of Afghan refugees", "first-generation", "doing what my mom/mother couldn't", or any family narrative. The site is professional without personal backstory. The bilingual/language fact (English · Pashto) is fine on its own — the family context around it is not.
+
+10. **Keep all copy short.** About: ≤50 words, one paragraph. Cards: one line each. No pitch language, no over-explaining. If it feels like it's selling, trim it.
+
+11. **Paper airplane on /journey is the cursor.** `cursor: none` is set on `document.body` for devices that support hover (`(hover: hover)`). Restored to `""` on unmount. Touch devices are unaffected.
