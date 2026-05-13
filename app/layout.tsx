@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://leemacaravan.com"),
   title: "Leema Caravan — Portfolio",
   description:
-    "Portfolio of Leema Caravan — CS senior at RPI building AI tools, EHR integrations, and internal platforms that solve real problems.",
+    "Portfolio of Leema Caravan. CS senior at RPI. Built an EHR-integrated patient tracker, a multi-agent AI platform, and a portal that drove a 125% pricing shift.",
   openGraph: {
     title: "Leema Caravan — Portfolio",
     description:

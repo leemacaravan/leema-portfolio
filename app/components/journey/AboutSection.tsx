@@ -21,10 +21,9 @@ export default function AboutSection() {
         style={{ fontFamily: "var(--font-patrick-hand)", fontSize: 19, lineHeight: 1.7, color: "var(--ink)" }}
       >
         <p>
-          Senior at <strong>Rensselaer Polytechnic Institute</strong> studying CS with a minor in
-          Economics, graduating <strong>May 2026</strong>. I build things that solve real
-          problems — internal tools, AI agents, and EHR integrations. Most recently I owned an
-          end-to-end portal at <strong>Daisy</strong> that&apos;s now used daily across the company.
+          Senior at <strong>RPI</strong> studying Computer Science with a minor in Economics,
+          graduating <strong>May 2026</strong>. Most recently at <strong>Daisy</strong>, where I
+          built a portal now used daily across the company.
         </p>
       </div>
     </section>

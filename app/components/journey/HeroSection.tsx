@@ -21,7 +21,7 @@ export default function HeroSection() {
         className="mt-2 tracking-[2px] text-[var(--ink-soft)]"
         style={{ fontFamily: "var(--font-patrick-hand)", fontSize: 18 }}
       >
-        Computer Science · RPI · Class of 2026
+        Computer Science · RPI · &apos;26
       </div>
 
       {/* Character on cloud */}

@@ -70,7 +70,7 @@ export default function ContactSection() {
         className="mt-16 tracking-[2px]"
         style={{ fontFamily: "var(--font-shadows)", color: "var(--ink-faint)" }}
       >
-        ✦ END OF JOURNEY · THANKS FOR FLYING ✦
+        END OF JOURNEY · THANKS FOR FLYING
       </div>
 
       {/* Footer */}
