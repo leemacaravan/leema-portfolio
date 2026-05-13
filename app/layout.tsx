@@ -22,19 +22,24 @@ const shadowsIntoLight = Shadows_Into_Light({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://leemacaravan.com"),
-  title: "Leema Caravan — Portfolio",
+  title: {
+    default: "Leema Caravan",
+    template: "%s · Leema Caravan",
+  },
   description:
-    "Portfolio of Leema Caravan. CS senior at RPI. Built an EHR-integrated patient tracker, a multi-agent AI platform, and a portal that drove a 125% pricing shift.",
+    "Computer Science senior at Rensselaer Polytechnic Institute. Class of 2026.",
   openGraph: {
-    title: "Leema Caravan — Portfolio",
+    title: "Leema Caravan",
     description:
-      "CS senior at RPI. Built an EHR-integrated patient tracker, a multi-agent AI platform, and a portal that drove a 125% pricing shift.",
+      "Computer Science senior at Rensselaer Polytechnic Institute. Class of 2026.",
     images: [{ url: "/badge-1024.png", width: 1024, height: 1024 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leema Caravan — Portfolio",
+    title: "Leema Caravan",
+    description:
+      "Computer Science senior at Rensselaer Polytechnic Institute. Class of 2026.",
     images: ["/badge-1024.png"],
   },
   icons: {
